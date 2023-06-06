@@ -18,8 +18,8 @@ const baseConfig = {
         extensions: ['.js'],
     },
     output: {
-        filename: 'index.js',
-        path: path.resolve(__dirname, '../dist'),
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, './dist'),
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -33,6 +33,5 @@ const baseConfig = {
 module.exports = ({ mode }) => {
     const isProductionMode = mode === 'prod';
     const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
-
     return merge(baseConfig, envConfig);
 };
