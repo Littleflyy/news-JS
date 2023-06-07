@@ -38,6 +38,7 @@
         "webpack-merge": "^5.7.3"
     },
     "dependencies": {
+        "eslint-webpack-plugin": "^4.0.1",
         "webpack-eslint-plugin": "^1.2.0"
     }
 }
